@@ -1,0 +1,12 @@
+version: '2'
+
+services:
+  bot:
+    env_file:
+      - ./.env
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    container_name: weather_bot
+    stop_signal: SIGTERM
+    restart: always
